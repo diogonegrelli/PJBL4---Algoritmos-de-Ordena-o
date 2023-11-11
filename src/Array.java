@@ -2,41 +2,39 @@ import java.util.ArrayList;
 
 public class Array {
 
-    private final ArrayList<Integer> array = new ArrayList<>();
-    int size = array.size();
-
-    public ArrayList<Integer> getArray() {
-        return array;
-    }
-
-    public void bubbleSort(ArrayList list) {
+    public void bubbleSort(ArrayList<Integer> array, int arraySize) {
         int i = 0;
-        int current = array.get(i);
-        int next = array.get(i + 1);
-        int size = list.size();
+        int size = arraySize;
 
-        if (size >= 1) {
-            if (current > next) {
-                array.set(i, next);
-                array.set((i + 1), current);
-                System.out.println(array);
-                i++;
-                if (i == size) {
-                    i = 0;
+        if (size > 1) {
+            while (i < size - 1) {
+                int current = array.get(i);
+                int next = array.get((i + 1));
+
+                if (current > next) {
+                    array.set(i, next);
+                    array.set((i + 1), current);
+                    System.out.println(array);
                 }
-            }
-            else {
                 i++;
-                if (i == size) {
-                    i = 0;
-                }
             }
-            bubbleSort(list);
+            size--;
+            bubbleSort(array, size);
+//
         }
         else{
-            System.out.println();
+            System.out.println("Array após ordenação bubblesort:");
+            System.out.println(array);
+
+        }
+
 
     }
+
+
+
+
+}
 
     /*public ArrayList insertionSort(){
         return array;
@@ -46,5 +44,4 @@ public class Array {
         return array;
     }*/
 
-    }
-}
+
