@@ -23,6 +23,7 @@ public class Array {
 //
         }
         else{
+            System.out.println("  ");
             System.out.println("Array após ordenação bubblesort:");
             System.out.println(array);
 
