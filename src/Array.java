@@ -21,8 +21,7 @@ public class Array {
             size--;
             bubbleSort(array, size);
 //
-        }
-        else{
+        } else {
             System.out.println("  ");
             System.out.println("Array após ordenação bubblesort:");
             System.out.println(array);
@@ -32,14 +31,14 @@ public class Array {
 
     }
 
-    public void quickSort(ArrayList<Integer> array, int inicio, int fim){
+    public void quickSort(ArrayList<Integer> array, int inicio, int fim) {
         int pivot = fim;
         int disponivel = inicio;
         int atual = inicio;
         int aux;
 
-        if (fim - disponivel > 0){
-            while (atual < pivot){
+        if (fim - disponivel >= 0) {
+            while (atual < pivot) {
                 if (array.get(atual) < array.get(pivot)) {
                     aux = array.get(disponivel);
                     array.set(disponivel, array.get(atual));
@@ -55,13 +54,14 @@ public class Array {
             array.set(pivot, aux);
             System.out.println(array);
 
-            if (disponivel - inicio > 0) {
+            if (disponivel - inicio >= 0) {
                 quickSort(array, inicio, disponivel - 1);
                 quickSort(array, disponivel + 1, fim);
             }
         }
     }
-
+}
+    /*
     public  void insertionSort(int array[]) {
         int x = array.length;
         for (int j = 1; j < x; j++) {
@@ -72,7 +72,7 @@ public class Array {
                 i--;
             }
             array[i + 1] = array2;
-            printArray(array);
+            //printArray(array);
         }
         System.out.println("Após a aplicação do Insertion Sort");    
         for(int i:array){    
