@@ -32,17 +32,41 @@ public class Array {
 
     }
 
+    public void quickSort(ArrayList<Integer> array, int inicio, int fim){
+        int pivot = fim;
+        int disponivel = inicio;
+        int atual = inicio;
+        int aux;
 
+        if (fim - disponivel > 0){
+            while (atual < pivot){
+                if (array.get(atual) < array.get(pivot)) {
+                    aux = array.get(disponivel);
+                    array.set(disponivel, array.get(atual));
+                    array.set(atual, aux);
+                    disponivel++;
+                    System.out.println(array);
+                }
+                atual++;
+            }
 
+            aux = array.get(disponivel);
+            array.set(disponivel, array.get(pivot));
+            array.set(pivot, aux);
+            System.out.println(array);
+
+            if (disponivel - inicio > 0) {
+                quickSort(array, inicio, disponivel - 1);
+                quickSort(array, disponivel + 1, fim);
+            }
+        }
+    }
 
 }
 
     /*public ArrayList insertionSort(){
         return array;
     }
-
-    public ArrayList quickSort(){
-        return array;
-    }*/
+    */
 
 

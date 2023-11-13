@@ -12,7 +12,10 @@ public class Main {
         }
 
 
-        ordenacao.bubbleSort(array, array.size());
+        //ordenacao.bubbleSort(array, array.size());
+
+        ordenacao.quickSort(array, 0, (array.size() - 1));
+        System.out.println(array);
 
     }
 }
