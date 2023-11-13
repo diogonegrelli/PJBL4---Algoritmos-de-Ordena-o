@@ -32,7 +32,7 @@ public class Array {
     }
 
     public void quickSort(ArrayList<Integer> array, int inicio, int fim) {
-        int pivot = fim;
+        int pivot = fim; //o pivot utilizado é o ultimo valor da lista
         int disponivel = inicio;
         int atual = inicio;
         int aux;
