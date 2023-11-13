@@ -82,9 +82,9 @@ public class Array {
     
     public void printArray(int array[]){
         int n = array.length;
-        System.out.println("Array atual: ");
+        System.out.print("Array atual: ");
         for (int i = 0; i < n; i++){
-            System.out.println(array[i] + " ");
+            System.out.print(array[i] + " ");
         }
         System.out.println();
 
