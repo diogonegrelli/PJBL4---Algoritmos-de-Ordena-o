@@ -13,6 +13,7 @@ public class Main {
 
 
         ordenacao.bubbleSort(array, array.size());
+        ordenacao.insertionSort(nums);
 
     }
 }

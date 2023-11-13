@@ -35,14 +35,30 @@ public class Array {
 
 
 
-}
-
-    /*public ArrayList insertionSort(){
-        return array;
+    public  void insertionSort(int array[]) {
+        int x = array.length;
+        for (int j = 1; j < x; j++) {
+            int array2 = array[j];
+            int i = j - 1;
+            while ((i > -1) && (array[i] > array2)) {
+                array[i + 1] = array[i];
+                i--;
+            }
+            array[i + 1] = array2;
+            printArray(array);
+        }
+        System.out.println("Após a aplicação do Insertion Sort");    
+        for(int i:array){    
+            System.out.print(i+ " ");    
+        }
     }
 
-    public ArrayList quickSort(){
-        return array;
-    }*/
-
-
+    public void printArray(int array[]) {
+        int n = array.length;
+        System.out.print("Array atual: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+}
